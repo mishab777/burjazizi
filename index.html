@@ -1,0 +1,975 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Burj Azizi</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/18.3.5/css/intlTelInput.css" integrity="sha512-VXxcTT278CJV0mFYrCVNcWp8BckqU31nWRqrvRYtw8OB82j3mZb6WkmrCanFeO5xRlyw0lGV+U3Kym4+kMvmSg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/18.3.5/js/intlTelInput.min.js" integrity="sha512-KcjcQ2KL6oVcezrL/m6NO1PW13QMnEN5BM4/u1JV9Pu0kBQgn/TmK1W6diupb4vMuGtFnO6Ojg3nzWutkow9Uw==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&display=swap');
+        *{
+            font-family: "Outfit", sans-serif;
+        }
+        a{
+            text-decoration: none;
+        }
+        .navbar{
+            width: 100%;
+            height: 70px;
+            background-color: #fff;
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            justify-content: space-between;
+        }
+        .nav-logo{
+            width: 20%;
+            height: 100%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        .nav-logo img{
+            width: auto;
+            height: 100%;
+            object-fit: contain;
+        }
+        .nav-links{
+            width: 60%;
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            justify-content: space-evenly;
+        }
+        .nav-links a{
+            text-decoration: none;
+            color: #000;
+        }
+        .hero{
+            background-image: url(img/hero-bg.jpg);
+            background-position: center;
+            background-size: cover;
+            width: 100%;
+            height: 100vh;
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            justify-content: center;
+        }
+        .hero-content{
+            width: 50%;
+            height: 100%;
+            padding-left: 4%;
+            display: flex;
+            align-items: flex-start;
+            justify-content: center;
+            flex-direction: column;
+        }
+        .hero-form{
+            width: 50%;
+            height: 100%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        .hero-content h1{
+            font-size: 50px;
+            font-weight: 700;
+            color: #fff;
+        }
+        .hero-content h2{
+            font-weight: 600;
+        }
+        .hero-content h3{
+            color: #CCAB4D;
+            background-color: #fff;
+            padding: 8px;
+            text-transform: uppercase;
+            font-size: 25px;
+        }
+        .hero-form form{
+            padding: 3%;
+            width: 400px;
+            height: auto;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            background-color: #CCAB4D;
+        }
+        .hero-form h3{
+            font-size: 18px;
+            color: #fff;
+            text-align: center;
+        }
+        .hero-form input{
+            height: 40px;
+            width: 100%;
+            border: hidden;
+            margin-bottom: 10px;
+            outline: none;
+            padding-left: 10px;
+            color: #000;
+        }
+        .hero-form textarea{
+            height: auto;
+            width: 100%;
+            border: hidden;
+            outline: none;
+            padding: 10px;
+            margin-top: 10px;
+            color: #000;
+            margin-bottom: 10px;
+        }
+        .hero-form form button{
+            width: 100%;
+            background-color: #000;
+            color: #fff;
+            height: 40px;
+            border: hidden;
+        }
+        .section-2 h1{
+            font-size: 35px;
+            font-weight: 600;
+            color: #000;
+        }
+        .section-2 h3{
+            font-size: 25px;
+            font-weight: 600;
+        }
+        .section-2 li i{
+            color: #CCAB4D;
+            margin-right: 8px;
+        }
+        .section-2 li{
+            list-style-type: none;
+            font-size: 18px;
+            margin-bottom: 8px;
+        }
+.section-1 h1{
+    font-size: 25px;
+    font-weight: 600;
+}
+.details-div{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px;
+    border-bottom: 1px solid #e1e1e1;
+}
+.details-div span{
+    font-size: 17px;
+}
+.section-location h3{
+        font-size: 30px;
+        font-weight: 600;
+    }
+    .section-location li{
+        font-size: 18px;
+        list-style-type: none;
+        margin-bottom:10px;
+    }
+    .section-location li i{
+        margin-right: 10px;
+        color: #D0AD6A;
+    }
+    .section-location li span{
+        font-weight: 600;
+    }
+    .location-image{
+        width: 100%;
+        height: 100%;
+    }
+    .location-image img{
+        width: 100%;
+        height: 100%;
+        cursor: zoom-in;
+        object-fit: cover;
+    }
+    .location-card{
+        width: 100%;
+        height: 150px;
+        padding: 10px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        border-radius: 10px;
+        box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+        }
+    .location-card img{
+        width: 50px;
+        height: 50px;
+        margin-bottom: 10px;
+    }
+    .location-card h3{
+        font-size: 18px;
+        font-weight: 600;
+        text-align: center;
+    }
+    .location-card span{
+        font-size: 16px;
+        text-align: center;
+    }
+    .section-3{
+        background-color: #F4F4F4;
+        width: 100%;
+        height: auto;
+    }
+    .section-3 h1{
+        font-size: 30px;
+        font-weight: 600;
+    }
+    .navbar-mobile{
+        display: none;
+    }
+    @media(min-width:320px) and (max-width:480px){
+        .navbar-mobile{
+            display: block;
+            width: 15%;
+        }
+        .nav-logo{
+            width: 40%;
+        }
+        .hero{
+            flex-direction: column;
+            height: auto;
+        }
+        .hero-content{
+            padding-top: 4%;
+            width: 90%;
+            padding-bottom: 4%;
+        }
+        .hero-form{
+            width: 90%;
+            padding-bottom: 4%;
+        }
+        .hero-form form{
+            width: 90%;
+        }
+        .sidebar {
+  background:#fff;
+  width:235px;
+  position:fixed;
+  top:0;
+  left:-235px;
+  z-index: 999;
+  height:100%;
+  box-shadow:0 2px 8px rgba(0,0,0,0.2);
+  padding-top:90px;
+  transition:all 0.3s ease-out;
+}
+
+.sidebar ul {
+  list-style:none;
+}
+
+.sidebar ul li {
+  display:block;
+}
+
+.sidebar ul li a {
+  padding:8px 15px;
+  font-size:16px;
+  color:black;
+  text-decoration:none;
+  display:block;
+  position:relative;
+  z-index:1;
+  transition:all 0.3s ease-out;
+  font-weight:500;
+}
+
+.sidebar ul li a i{
+    margin-right: 8px;
+    color: #cfa14d;
+}
+.sidebar ul li a:before {
+  content:'';
+  position:absolute;
+  bottom:0;
+  left:50%;
+  right:50%;
+  transform:translate(-50%,-50%);
+  width:0;
+  height:1px;
+  background:#cfa14d;
+  z-index:-1;
+  transition:all 0.3s ease-out;
+}
+
+.sidebar ul li a:hover:before {
+  width:100%;
+}
+
+.sidebar ul li a:hover {
+  color:#cfa14d;
+}
+
+.sidebarshow {
+  left:0;
+}
+.logo-sidebar{
+    width: 100%;
+    height: 80px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.logo-sidebar img{
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+}
+.nav-links{
+    display: none;
+}
+.burger {
+                position: relative;
+                width: 40px;
+                height: 30px;
+                background: transparent;
+                cursor: pointer;
+                display: block;
+              }
+
+              .burger input {
+                display: none;
+              }
+
+              .burger span {
+                display: block;
+                position: absolute;
+                height: 4px;
+                width: 100%;
+                background: black;
+                border-radius: 9px;
+                opacity: 1;
+                left: 0;
+                transform: rotate(0deg);
+                transition: .25s ease-in-out;
+              }
+
+              .burger span:nth-of-type(1) {
+                top: 0px;
+                transform-origin: left center;
+              }
+
+              .burger span:nth-of-type(2) {
+                top: 50%;
+                transform: translateY(-50%);
+                transform-origin: left center;
+              }
+
+              .burger span:nth-of-type(3) {
+                top: 100%;
+                transform-origin: left center;
+                transform: translateY(-100%);
+              }
+
+              .burger input:checked ~ span:nth-of-type(1) {
+                transform: rotate(45deg);
+                top: 0px;
+                left: 5px;
+              }
+
+              .burger input:checked ~ span:nth-of-type(2) {
+                width: 0%;
+                opacity: 0;
+              }
+
+              .burger input:checked ~ span:nth-of-type(3) {
+                transform: rotate(-45deg);
+                top: 28px;
+                left: 5px;
+              }
+    }
+    .tooltip-container {
+  position: fixed;
+  bottom: 20px;
+  right: 80px;
+  background-color: #f47fff;
+  cursor: pointer;
+  transition: all 0.2s;
+  font-size: 17px;
+  /*padding: 0.7em 1.8em;*/
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  fill: #fff;
+  box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 25px;
+  border: 1px solid rgba(255, 255, 255, 0.18);
+}
+.tooltip-container .borde-back {
+  width: 60px;
+  height: 60px;
+  background-color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  box-shadow: none;
+}
+
+.tooltip-container .icon {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 10;
+  background-color: #24AC4A;
+  cursor: pointer;
+  color: #fff;
+}
+
+.tooltip {
+  position: absolute;
+  top: -2;
+  left: -45px; /* Altere a posição inicial para a esquerda, fora da tela */
+  transform: translateX(
+    -32%
+  ); /* Usando translateX para controlar a transição da esquerda para a direita */
+  width: 160px;
+  height: 52px;
+  opacity: 0;
+  pointer-events: none;
+  transition: all 0.6s;
+  border-radius: 50px;
+  background-color: #24AC4A;
+  background-image: linear-gradient(
+    -90deg,
+    #24AC4A 0%,
+    #24AC4A 75%,
+    #24AC4A 100%
+  );
+  display: flex;
+  align-items: center;
+  justify-content: right;
+  padding-right: 16px;
+  color: #fff;
+  font-size: 18px;
+  font-family: "Montserrat", sans-serif;
+  font-weight: 600;
+}
+.tooltip a{
+  text-decoration: none;
+  color: #fff;
+  font-size: 14px;
+}
+.tooltip::before {
+  position: absolute;
+  content: "";
+  height: 0.6em;
+  width: 0.6em;
+  right: -0.2em;
+  top: 50%;
+  transform: translateY(-50%) rotate(45deg);
+  background: var(--background);
+}
+
+.tooltip-container:hover .tooltip {
+  left: 100%;
+  opacity: 1;
+  visibility: visible;
+  pointer-events: auto;
+  z-index: -10;
+}
+.tooltip-container:hover {
+  transform: translateX(-50px);
+  transition: 0.5s linear;
+}
+    </style>
+</head>
+<body>
+
+    <div class="tooltip-container">
+        <span class="tooltip"><a target="_blank" href="https://wa.me/+97112345678">Enquire Now</a></span>
+        <span class="text">
+          <div class="borde-back">
+            <div class="icon">
+              <svg xmlns="http://www.w3.org/2000/svg" width="23" height="23" fill="currentColor" class="bi bi-whatsapp" viewBox="0 0 16 16">
+                <path d="M13.601 2.326A7.85 7.85 0 0 0 7.994 0C3.627 0 .068 3.558.064 7.926c0 1.399.366 2.76 1.057 3.965L0 16l4.204-1.102a7.9 7.9 0 0 0 3.79.965h.004c4.368 0 7.926-3.558 7.93-7.93A7.9 7.9 0 0 0 13.6 2.326zM7.994 14.521a6.6 6.6 0 0 1-3.356-.92l-.24-.144-2.494.654.666-2.433-.156-.251a6.56 6.56 0 0 1-1.007-3.505c0-3.626 2.957-6.584 6.591-6.584a6.56 6.56 0 0 1 4.66 1.931 6.56 6.56 0 0 1 1.928 4.66c-.004 3.639-2.961 6.592-6.592 6.592m3.615-4.934c-.197-.099-1.17-.578-1.353-.646-.182-.065-.315-.099-.445.099-.133.197-.513.646-.627.775-.114.133-.232.148-.43.05-.197-.1-.836-.308-1.592-.985-.59-.525-.985-1.175-1.103-1.372-.114-.198-.011-.304.088-.403.087-.088.197-.232.296-.346.1-.114.133-.198.198-.33.065-.134.034-.248-.015-.347-.05-.099-.445-1.076-.612-1.47-.16-.389-.323-.335-.445-.34-.114-.007-.247-.007-.38-.007a.73.73 0 0 0-.529.247c-.182.198-.691.677-.691 1.654s.71 1.916.81 2.049c.098.133 1.394 2.132 3.383 2.992.47.205.84.326 1.129.418.475.152.904.129 1.246.08.38-.058 1.171-.48 1.338-.943.164-.464.164-.86.114-.943-.049-.084-.182-.133-.38-.232"/>
+              </svg>
+            </div>
+          </div>
+        </span>
+      </div>
+
+    <div class="navbar">
+        <div class="nav-logo">
+            <img src="img/burj-logo.webp" alt="">
+        </div>
+        <div class="nav-links">
+            <a href="#overview">OVERVIEW</a>
+            <a href="#amenities">AMENITIES</a>
+            <a href="#location">LOCATION</a>
+            <a href="#masterplan">MASTER PLAN</a>
+        </div>
+        <div class="navbar-mobile">
+            <label class="burger" for="burger">
+                <input type="checkbox" id="burger">
+                <span></span>
+                <span id="close-sidebar"></span>
+                <span ></span>
+              </label>
+            <div class="sidebar" id='sidebar'>
+                <a href="" class="logo-sidebar"><img src="img/burj-logo.webp" alt="" height="50" width="auto"></a>
+                <ul>
+                  <li><a href="#overview">OVERVIEW</a></li>
+                   <li><a href="#masterplan">MASTER PLAN</a></li>
+                    <li><a href="#amenities">AMENITIES</a></li>
+                    <li><a href="#location">LOCATION</a></li>
+                </ul>
+              </div>
+            </div>
+    </div>
+    <div class="hero" id="hero">
+        <div class="hero-content">
+            <h1 class="mb-2">Burj Azizi</h1>
+            <h2 class="mb-3">At Sheikh Zayed Road, Dubai</h2>
+            <h3>By Azizi Developments</h3>
+        </div>
+        <div class="hero-form">
+            <form action="">
+                <h3 class="mb-3">Get exclusive access before it is sold out!
+                    Register your details</h3>
+            <input type="text" name="name" id="" placeholder="Enter Name*" required>
+            <input type="text" name="email" id="" placeholder="Your Email*">
+            <input type="text" name="phone" id="" placeholder="Phone*" class="phone-input">
+            <input type="hidden" name="Country Code" class="countrycode">
+            <textarea name="message" id="" cols="5" rows="5" placeholder="Enter Your Message"></textarea>
+            <button type="submit">Submit</button>
+            </form>
+        </div>
+    </div>
+    <div class="container section-1 pt-4 pb-4">
+        <h1 class="mb-4">Burj Azizi Tower Details</h1>
+        <div class="row g-2">
+            <div class="col-md-6 col-12">
+              <div class="details-div">
+                <span><b>Property Type</b></span>
+                <span>Penthouse</span>
+              </div>
+            </div>
+            <div class="col-md-6 col-12">
+                <div class="details-div">
+                    <span><b>Downpayment</b></span>
+                    <span>Call Us</span>
+                  </div>
+            </div>
+            <div class="col-md-6 col-12">
+                <div class="details-div">
+                    <span><b>Unit Type</b></span>
+                    <span>2, 3, 4 & 5 Bedroom</span>
+                  </div>
+            </div>
+            <div class="col-md-6 col-12">
+                <div class="details-div">
+                    <span><b>Payment Plan</b></span>
+                    <span>80/20</span>
+                  </div>
+            </div>
+            <div class="col-md-6 col-12">
+                <div class="details-div">
+                    <span><b>Size</b></span>
+                    <span>1,988 to 4,158 Sqft</span>
+                  </div>
+            </div>
+            <div class="col-md-6 col-12">
+                <div class="details-div">
+                    <span><b>Completion date</b></span>
+                    <span>Q4 - 2029</span>
+                  </div>
+            </div>
+            <div class="col-md-6 col-12">
+                <div class="details-div">
+                    <span><b>Area</b></span>
+                    <span>Sheikh Zayed Road</span>
+                  </div>
+            </div>
+            <div class="col-md-6 col-12">
+                <div class="details-div">
+                    <span><b>Developer</b></span>
+                    <span>Azizi Developer</span>
+                  </div>
+            </div>
+            <div class="col-md-6 col-12">
+                <div class="details-div">
+                    <span><b>Title type</b></span>
+                    <span>Freehold</span>
+                  </div>
+            </div>
+            <div class="col-md-6 col-12">
+                <div class="details-div">
+                    <span><b>Starting price</b></span>
+                    <span>AED 10,000</span>
+                  </div>
+            </div>
+          </div>
+    </div>
+    <div class="container section-2 pt-4 pb-4" id="overview">
+        <h1 class="mb-3">About Burj Azizi</h1>
+        <p>Embark on a groundbreaking venture with <b> Burj Azizi at Sheikh Zayed Road</b>, a colossal billion project by Azizi developments with premium apartments, penthouses and a 7-star hotel. This architectural marvel is destined to be world’s second tallest skyscraper, soaring over 700 meters, with a symphony of residential opulence, a seven-star hotel experience, and a revolutionary vertical mall, creating a vertical realm of luxury lifestyle like never before. Emphasizing the development as a legacy to the emirates will provide endless opportunity with its envision, towering gift providing abundance and opportunity. Experience the lifestyle with its unique observation deck and upscale dining options that will elevate the city's skyline.</p>
+        <p>The prime and strategic location at Sheikh Zayed Road offers its residents a centric locality in Dubai, where reaching to the central nerve of the city is just a matter of minutes. The nearby access to the major road networks and metro allows its residents and guests to enjoy the swift navigation, where you are leaving just minutes away reach from the iconic landmarks and destinations. The façade is located just next door access to the notable landmarks including World Trade Centre, the leisure business and commercial districts, top-rated dining and leisure class venues as well as its hospitality, culture and art.</p>
+        <p>The inception of façade is a testament to the Dubai’s skylines, creating an extraordinary development that pushes the boundaries of architecture and design. The design architecture is more than just a skyscraper aims to be a vertical community, where everyone can explore the unparalleled experience of luxury and comfort. The tower design and architecture incorporate a true balance of residential, hospitality and retail space crafted to cater its residents, making it a self-sustainable urban environment. The luxury premium class residences will offer a true sanctuary of sophistication, where every detail is laced with utmost comfort with stylish ambience.</p>
+        <h3 class="mb-3">Key Highlights</h3>
+        <li><i class="fa-solid fa-angles-right"></i>Luxurious High-Rise Residences by Azizi Developments</li>
+        <li><i class="fa-solid fa-angles-right"></i>Architecture by WS Atkins & Partners</li>
+        <li><i class="fa-solid fa-angles-right"></i>122 Floors Mixed-Use High-Rise Development</li>
+         <li><i class="fa-solid fa-angles-right"></i>22 Floors Exclusively for Residential Use</li>
+          <li><i class="fa-solid fa-angles-right"></i>Top-notch Amenities and Facilities</li>
+          <li><i class="fa-solid fa-angles-right"></i>Easy Connectivity to Famous Roads and Areas</li>
+          <li><i class="fa-solid fa-angles-right"></i>Flexible Payment Plans</li>
+          <li><i class="fa-solid fa-angles-right"></i>Book Now with an Affordable Down Payment.</li>
+    </div>
+    <div class="container section-location pt-2 pb-4" id="location">
+        <h3 class="mb-3">Location</h3>
+        <div class="row gx-4 gy-3">
+            <div class="col-md-6">
+                <div class="location-image">
+                <a target="_blank" href="img/location.webp"><img src="img/location.webp" alt=""></a>
+            </div>
+            </div>
+            <div class="col-md-6">
+                <div class="row gx-3 gy-3">
+                    <div class="col-md-6">
+                        <div class="location-card">
+                            <img src="img/Burj-Khalifa.webp" alt="">
+                            <h3>Burj Khalifa</h3>
+                            <span>13 Minutes</span>
+                        </div>
+                    </div>
+                    <div class="col-md-6">
+                        <div class="location-card">
+                            <img src="img/Business-Bay.webp" alt="">
+                            <h3>Business Bay</h3>
+                            <span>15 Minutes</span>
+                        </div>
+                    </div>
+                    <div class="col-md-6">
+                        <div class="location-card">
+                            <img src="img/Dubai-International-Airport.webp" alt="">
+                            <h3>Dubai International Airport</h3>
+                            <span>15 Minutes</span>
+                        </div>
+                    </div>
+                    <div class="col-md-6">
+                        <div class="location-card">
+                            <img src="img/Dubai-Mall.webp" alt="">
+                            <h3>Dubai Mall</h3>
+                            <span>12 Minutes</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <style>
+        .feature-card{
+            width: 100%;
+            height: auto;
+            position: relative;
+            padding: 10px;
+            display: flex;
+            background-color: #fff;
+            flex-direction: column;
+            align-items: center;
+            padding-top: 50px;
+            justify-content: center;
+            border-radius: 10px;
+            box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+        }
+        .feature-card-img{
+            position: absolute;
+            width: 80px;
+            height: 80px;
+            top: -30px;
+            border: 2px solid #dadada;
+            display: flex;
+            background-color: #fff;
+            align-items: center;
+            justify-content: center;
+            border-radius: 40px;
+        }
+        .feature-card-img img{
+            width: 60px;
+            height: 60px;
+            object-fit: contain;
+        }
+        .feature-card h5{
+            font-size: 18px;
+            font-weight: 600;
+        }
+        .feature-card p{
+            font-size: 15px;
+            text-align: center;
+        }
+    </style>
+    <div class="section-3" id="amenities">
+    <div class="container pt-4 pb-4">
+        <h1 class="mb-5">Feature & Amenities</h1>
+        <div class="row gy-5 gx-3">
+            <div class="col-md-3">
+                <div class="feature-card">
+                    <div class="feature-card-img">
+                        <img src="img/24x7-Security.webp" alt="">
+                    </div>
+                    <h5 class="mt-3">24x7 Security</h5>
+                    <p>Offer a single window solution to all security and facility needs.</p>
+                </div>
+            </div>
+            <div class="col-md-3">
+                <div class="feature-card">
+                    <div class="feature-card-img">
+                        <img src="img/Dining-Outlets.webp" alt="">
+                    </div>
+                    <h5 class="mt-3">Dining Outlets</h5>
+                    <p>Where good food is served to people, often in a formal way.</p>
+                </div>
+            </div>
+            <div class="col-md-3">
+                <div class="feature-card">
+                    <div class="feature-card-img">
+                        <img src="img/Gymnasium.webp" alt="">
+                    </div>
+                    <h5 class="mt-3">Gymnasium</h5>
+                    <p>For those who want to remain fit and lead a healthy lifestyle.</p>
+                </div>
+            </div>
+            <div class="col-md-3">
+                <div class="feature-card">
+                    <div class="feature-card-img">
+                        <img src="img/Dining-Outlets.webp" alt="">
+                    </div>
+                    <h5 class="mt-3">Kids Play Area</h5>
+                    <p>An area used for outdoor play or recreation, especially by children</p>
+                </div>
+            </div>
+            <div class="col-md-3">
+                <div class="feature-card">
+                    <div class="feature-card-img">
+                        <img src="img/Park.webp" alt="">
+                    </div>
+                    <h5 class="mt-3">Parks and Leisure Areas</h5>
+                    <p>Access to parks & recreation facilities leads to healthy lifestyles.</p>
+                </div>
+            </div>
+            <div class="col-md-3">
+                <div class="feature-card">
+                    <div class="feature-card-img">
+                        <img src="img/Restaurants.webp" alt="">
+                    </div>
+                    <h5 class="mt-3">Restaurants</h5>
+                    <p>Treat your inner foodie by serving authentic flavors.</p>
+                </div>
+            </div>
+            <div class="col-md-3">
+                <div class="feature-card">
+                    <div class="feature-card-img">
+                        <img src="img/Swimming-Pool.webp" alt="">
+                    </div>
+                    <h5 class="mt-3">Swimming Pool</h5>
+                    <p>The best place to head when you want to relax and rejuvenate.</p>
+                </div>
+            </div>
+            <div class="col-md-3">
+                <div class="feature-card">
+                    <div class="feature-card-img">
+                        <img src="img/Shopping-Outlets.webp" alt="">
+                    </div>
+                    <h5 class="mt-3">Retail Outlets</h5>
+                    <p>Offers everything you need to sustain your lifestyle.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<style>
+    .master-plan-img{
+        width: 100%;
+        height: 100%;
+    }
+    .section-4 h1{
+        font-size: 30px;
+        font-weight: 600;
+    }
+    .master-plan-img img{
+        width: 100%;
+        height: 100%;
+        cursor: zoom-in;
+        object-fit: cover;
+    }
+    .master-plan-text{
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        justify-content: center;
+        width: 100%;
+        height: 100%;
+    }
+    .footer{
+background:#000;
+padding:30px 0px;
+font-family: 'Play', sans-serif;
+text-align:center;
+}
+
+.footer .row{
+width:100%;
+margin:1% 0%;
+padding:0.6% 0%;
+color:gray;
+font-size:0.8em;
+}
+.footer .row a{
+text-decoration:none;
+color:gray;
+transition:0.5s;
+}
+
+.footer .row a:hover{
+color:#fff;
+}
+
+.footer .row ul{
+width:100%;
+display: flex;
+flex-direction: row;
+align-items: center;
+justify-content: center;
+}
+
+.footer .row ul li{
+display:inline-block;
+margin:0px 30px;
+}
+
+.footer .row a i{
+font-size:2em;
+margin:0% 1%;
+}
+
+@media (max-width:720px){
+.footer{
+text-align:left;
+padding:5%;
+}
+.footer .row ul{
+    flex-wrap: wrap;
+}
+.footer .row ul li a{
+    margin-right: 10px;
+}
+.footer .row ul li{
+display:block;
+margin:10px 0px;
+text-align:left;
+}
+.footer .row a i{
+margin:0% 3%;
+}
+}
+</style>
+<div class="container section-4 pt-4 pb-4" id="masterplan">
+    <h1 class="mb-3">Master Plan</h1>
+    <div class="row g-3">
+        <div class="col-md-6">
+            <div class="master-plan-img">
+                <a target="_blank" href="img/master-plan.webp"><img src="img/master-plan.webp" alt=""></a>
+            </div>
+        </div>
+        <div class="col-md-6">
+              <div class="master-plan-text">
+                <p>Burj Azizi's master plan by Azizi Developments intricately weaves together luxury residences, a seven-star hotel, and a vertical mall. The design harmonizes aesthetics with functionality, promising a seamless integration of living, leisure, and commerce in one iconic structure. The tower is envisioned as a self-sustaining urban environment where residents and visitors can live, work, and play in a single, cohesive space. The design focuses on maximizing the use of space while maintaining a sense of openness and connectivity.</p>
+                <p>The 7-star hotel is another key element of the development, offering an exclusive hospitality experience that caters to the most discerning guests. The hotel will feature a range of luxurious suites, fine dining restaurants, and world-class amenities, making it a destination in itself. The vertical mall, spread over several floors, is designed to provide a unique shopping experience that combines retail with stunning views of the city.</p>
+            </div>
+        </div>
+    </div>
+</div>
+<footer>
+    <div class="footer">
+    <div class="row">
+    <ul>
+<li><a href="#"><i class="fa-brands fa-facebook"></i></a></li>
+<li><a href="#"><i class="fa-brands fa-instagram"></i></a></li>
+<li><a href="#"><i class="fa-brands fa-whatsapp"></i></a></li>
+<li><a href="#"><i class="fa-brands fa-x-twitter"></i></a></li>
+</ul>
+    </div>
+
+    <div class="row">
+    <ul>
+    <li><a href="#overview">OVERVIEW</a></li>
+    <li><a href="#masterplan">MASTER PLAN</a></li>
+    <li><a href="#amenities">AMENITIES</a></li>
+    <li><a href="#location">LOCATION</a></li>
+    <li><a href="#hero">CONTACT</a></li>
+    </ul>
+    </div>
+
+    <div class="row">
+    <p class="text-center">Copyright © 2024 Positive Properties - All rights reserved</p>
+    </div>
+    </div>
+    </footer>
+
+    <script>
+        document.querySelectorAll('.phone-input').forEach(function(input) {
+        const iti = window.intlTelInput(input, {
+            separateDialCode: true,
+            utilsScript: "https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/18.3.5/js/utils.js",
+            initialCountry: "ae"
+        });
+
+        input.addEventListener('input', function () {
+            const countryCodeInput = input.closest('form').querySelector('.countrycode');
+            const selectedCountryData = iti.getSelectedCountryData();
+            countryCodeInput.value = '+' + selectedCountryData.dialCode;
+        });
+    });
+
+    </script>
+    <script>
+        var btn = document.querySelector('#burger');
+        var btnst = true;
+        var sidebar = document.getElementById('sidebar');
+        var links = sidebar.querySelectorAll('a');
+
+        btn.onclick = function() {
+          toggleSidebar();
+        };
+
+        links.forEach(function(link) {
+          link.onclick = function() {
+            if (!btnst) {
+              toggleSidebar();
+            }
+          };
+        });
+
+        function toggleSidebar() {
+          if(btnst) {
+            document.querySelector('#burger').classList.add('burger');
+            sidebar.classList.add('sidebarshow');
+            btnst = false;
+          } else {
+            document.querySelector('#close-sidebar').classList.remove('burger');
+            sidebar.classList.remove('sidebarshow');
+            btnst = true;
+          }
+        }
+        </script>
+
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js" integrity="sha384-IQsoLXl5PILFhosVNubq5LC7Qb9DXgDA9i+tQ8Zj3iwWAwPtgFTxbJ8NT4GN1R8p" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.min.js" integrity="sha384-cVKIPhGWiC2Al4u+LWgxfKTRIcfu0JTxR+EQDz/bgldoEyl4H0zUF0QKbrJ0EcQF" crossorigin="anonymous"></script>
+</body>
+</html>
